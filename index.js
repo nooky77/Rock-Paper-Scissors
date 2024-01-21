@@ -16,9 +16,12 @@ function getComputerChoice() {
 // playGames takes 2 args, playerChoice and cpuChoice
 // args must be case-insensitive and
 function playOneGame(playerChoice, computerChoice) {
+	// set playerChoice to lowerCase
+	// while loop until a winner is decided
 	// compare playerChoice to computerChoice.
 	// if ties, replay the round
-	// return the winner with str
+	// else break loop
+	// return the winner with a bool, true human win, false cpu
 }
 
 // fnc that plays a bo5
