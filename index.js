@@ -15,13 +15,23 @@ function getComputerChoice() {
 
 // playGames takes 2 args, playerChoice and cpuChoice
 // args must be case-insensitive and
-function playOneGame(playerChoice, computerChoice) {
+function playOneGame(player, computerChoice) {
 	// set playerChoice to lowerCase
+	let playerChoice = player.toLowerCase();
 	// while loop until a winner is decided
 	// compare playerChoice to computerChoice.
-	// if ties, replay the round
-	// else break loop
-	// return the winner with a bool, true human win, false cpu
+	if (playerChoice === computerChoice) {
+		return "draw";
+	} else if (playerChoice === "rock") {
+		if (computerChoice === "scissors") return "win";
+		if (computerChoice === "paper") return "lost";
+	} else if (playerChoice === "paper") {
+		if (computerChoice === "rock") return "win";
+		if (computerChoice === "scissors") return "lost";
+	} else {
+		if (computerChoice === "paper") return "win";
+		if (computerChoice === "rock") return "lost";
+	}
 }
 
 // fnc that plays a bo5
