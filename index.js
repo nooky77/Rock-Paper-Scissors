@@ -1,3 +1,29 @@
+const btnStart = document.querySelector(".btn-start");
+const btnChoices = document.querySelectorAll(".btn-choices");
+const btnRock = document.querySelector(".btn-rock");
+const btnPaper = document.querySelector(".btn-paper");
+const btnScissors = document.querySelector(".btn-scissors");
+let gameRunning = false;
+
+btnStart.addEventListener("click", gameStarted);
+btnRock.addEventListener("click", clicked);
+btnRock.addEventListener("click", clicked);
+btnPaper.addEventListener("click", clicked);
+btnScissors.addEventListener("click", clicked);
+
+function clicked(e) {
+	let playerChoice = e.target.textContent;
+	console.log(playerChoice);
+}
+
+function gameStarted() {
+	// Set the game as running and hidding buttons
+	gameRunning = true;
+	btnStart.classList.toggle("invisible");
+	[...btnChoices].forEach((choice) => choice.classList.toggle("invisible"));
+}
+
+// GAME LOGICS
 // getComputerChoice fnc will return rock, paper or scissors.
 function getComputerChoice() {
 	// Use math.random to generate a nbr between 1 and 3

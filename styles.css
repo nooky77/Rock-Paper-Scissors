@@ -1,0 +1,9 @@
+body {
+	background-color: lightslategrey;
+	text-align: center;
+	font-family: "Helvetica", sans-serif;
+}
+
+.invisible {
+	display: none;
+}
