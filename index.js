@@ -9,7 +9,7 @@ const p2Score = document.querySelector(".p2Score");
 let cpuScore = 0;
 let userScore = 0;
 
-btnStart.addEventListener("click", gameStarted);
+btnStart.addEventListener("click", startGame);
 btnRock.addEventListener("click", getPlayerChoice);
 btnPaper.addEventListener("click", getPlayerChoice);
 btnScissors.addEventListener("click", getPlayerChoice);
@@ -39,10 +39,12 @@ function game(playerChoice) {
 	}
 }
 
-function gameStarted() {
+function startGame() {
 	// Set the game as running and hidding buttons
 	btnStart.classList.toggle("invisible");
 	resultText.textContent = "";
+	p1Score.textContent = userScore;
+	p2Score.textContent = cpuScore;
 	[...btnChoices].forEach((choice) => choice.classList.toggle("invisible"));
 }
 
